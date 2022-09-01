@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 
-API_ID = ""
-API_HASH = ""
-BOT_TOKEN = ""
+API_ID = "10872318"
+API_HASH = "d4582d8cdb1e41a2df51e404940d6e8f"
+BOT_TOKEN = "5778268282:AAEn-Y8xKw86jHp-lzkwtfZbNUmFxj-q0Sk"
 
 
 ROGUE = Client(
