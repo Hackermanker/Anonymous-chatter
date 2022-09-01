@@ -14,7 +14,7 @@ ROGUE = Client(
 )
 
 START_BUTTONS = [[
-  InlineKeyboardButton("join my updates channel", url="t.me/botupdatesastra")
+  InlineKeyboardButton("😈ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ😈", url="t.me/botupdatesastra")
 ]]
 
 @ROGUE.on_message(filters.command("start"))
