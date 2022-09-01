@@ -14,12 +14,13 @@ ROGUE = Client(
 
 @ROGUE.on_message(filters.command("start"))
 async def start_cmd(client,message):
-    print("Start Command")
+    await message.reply_text("Hello...! I am Rogue Demo bot")
+    
 
-@ROGUE.on_message(filters.command("help"))
-async def help_cmd(client,message):
-    print("HELP command")
-
+@ROGUE.on_message(filters.command("about"))
+async def about_cmd(client,message):
+    await message.reply_text("Bot status")
+    
 
 
 print("Bot Started")
