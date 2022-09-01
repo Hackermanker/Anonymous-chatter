@@ -14,8 +14,9 @@ ROGUE = Client(
 
 @ROGUE.on_message(filters.command("start"))
 async def start_cmd(client,message):
-    await message.reply_text("Hello...! I am Rogue Demo bot")
-    
+    await message.reply_photo(
+        photo="https://te.legra.ph/file/05a3e40fa06809b07abd4.jpg",
+        caption="hello guyzz😜 i m rogyyy bot")
 
 @ROGUE.on_message(filters.command("about"))
 async def about_cmd(client,message):
