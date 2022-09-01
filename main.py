@@ -12,6 +12,15 @@ ROGUE = Client(
     bot_token=BOT_TOKEN
 )
 
+@ROGUE.on_message(filters.command("start"))
+async def start_cmd(client,message):
+    print("Start Command")
+
+@ROGUE.on_message(filters.command("help"))
+async def help_cmd(client,message):
+    print("HELP command")
+
+
 
 print("Bot Started")
 
