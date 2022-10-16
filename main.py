@@ -1,20 +1,20 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-API_ID = "10872318"
-API_HASH = "d4582d8cdb1e41a2df51e404940d6e8f"
-BOT_TOKEN = "5574350980:AAEnaJB55g8PdAj8E_IaBwUwt2-6JaFwTVo"
+API_ID = ""
+API_HASH = ""
+BOT_TOKEN = ""
 
 
 ROGUE = Client(
-    name="RogueBot",
+    name="Anonymous-chatter",
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN
 )
 
 START_BUTTONS = [[
-  InlineKeyboardButton("😈ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ😈", url="t.me/botupdatesastra")
+  InlineKeyboardButton("ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜꜱᴇ ᴍᴇ", url="t.me/botupdatesastra")
 ]]
 
 @ROGUE.on_message(filters.command("start"))
