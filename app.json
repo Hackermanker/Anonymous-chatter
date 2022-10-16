@@ -1,0 +1,32 @@
+{
+    "name": "Anonymous-chatting-bot",
+    "description": "A telegram bot to send messeges to group using bot anonymously",
+    "repository": "https://github.com/Hackermanker/Anonymous-chatter",
+    "keywords": [
+        "glitch art",
+        "telegram bot",
+        "pyrogram"
+    ],
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your Bot token from @Botfather"
+        },
+        "API_ID": {
+            "description": "Your API_ID from https://my.telegram.org/apps"
+        },
+        "CHAT_ID": {
+            "description": "Your CHAT_ID add @Aliaqueen_bot to your group and send /id in your group"
+        },
+        "USER_ID": {
+            "description": "SEND /ID TO @Aliaqueen_bot"
+        },
+        "API_HASH": {
+            "description": "Your API_HASH from https://my.telegram.org/apps"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
