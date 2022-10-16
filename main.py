@@ -1,41 +1,17 @@
+import os
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
-API_ID = ""
-API_HASH = ""
-BOT_TOKEN = ""
-
-
-ROGUE = Client(
-    name="Anonymous-chatter",
-    api_id=API_ID,
-    api_hash=API_HASH,
-    bot_token=BOT_TOKEN
+CHAT_ID = int(os.environ.get("CHAT_ID", 0))
+USER_ID = int(os.environ.get("USER_ID", 0))
+Bot = Client(
+    "Anonymous-chatter",
+    bot_token = os.environ["BOT_TOKEN"],
+    api_id = int(os.environ["API_ID"]),
+    api_hash = os.environ["API_HASH"]
 )
-
-START_BUTTONS = [[
-  InlineKeyboardButton("ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜꜱᴇ ᴍᴇ", url="t.me/botupdatesastra")
-]]
-
-@ROGUE.on_message(filters.command("start"))
-async def start_cmd(client,message):
-    await message.reply_photo(
-        photo="https://te.legra.ph/file/05a3e40fa06809b07abd4.jpg",
-        caption="Hello guyzz i m just a testing machine of unwanted things",
-        reply_markup=InlineKeyboardMarkup(START_BUTTONS)
-    )
-
-@ROGUE.on_message(filters.command("about"))
-async def about_cmd(client,message):
-    await message.reply_text("Bot status")
-    
-
-
-print("Bot Started")
-
-ROGUE.run()
-
-
+@Bot.on_message(filters.private & filters.all & filters.user(USER_ID))
+async def start(bot, update):
+    await bot.send_message(CHAT_ID,update.text)
+Bot.run()
 
     
     
