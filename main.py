@@ -14,8 +14,15 @@ Bot = Client(
 STAR_BUTTONS = [[
   InlineKeyboardButton("UPDATES CHANNEL", url="https://t.me/botupdatesastra")
 ]]
+
+@Bot.on_message(filters.command("start"))
+async def start_cmd(client, message):
+    await message.reply_text(
+        text="Hello 👋 I am a simple anonymous admin bot for messaging in specific chats. You can also make a one like me",
+        reply_markup=InlineKeyboardMarkup(START_BUTTONS)
+    )
      
-@Bot.on_message(filters.private & filters.all & filters.user(USER_ID) & filters.commands)
+@Bot.on_message(filters.private & filters.all & filters.user(USER_ID))
 async def start(bot, update):
     await bot.send_message(CHAT_ID,update.text)
 Bot.run()
