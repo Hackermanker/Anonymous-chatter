@@ -12,7 +12,8 @@ Bot = Client(
 )
 
 STAR_BUTTONS = [[
-  InlineKeyboardButton("UPDATES CHANNEL", url="https://t.me/botupdatesastra")
+  InlineKeyboardButton("DEPLOY YOUR OWN", url="https://github/Hackermanker/Anonymous-chatter"),
+  InlineKeyboardButton ("UPDATED CHANNEL", url="https://t.me/botupdatesastra")
 ]]
 
 @Bot.on_message(filters.command("start"))
